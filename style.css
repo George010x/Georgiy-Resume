@@ -23,9 +23,15 @@ img {
     border-radius: 50%;
     display: block;
     margin: 0 auto 30px;
+    object-fit: cover;
+    object-position: center;  /* Центрирует лицо */
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    object-fit: cover;  /* ← ЭТОТ ЗОЛОТОЙ СТРОКА! */
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
 
 img:hover {
