@@ -1,4 +1,4 @@
-/* Сброс стилей и базовые настройки */
+/* СТРОГИЙ Ч/Б СТИЛЬ + МОБИЛЬНАЯ ТАБЛИЦА */
 * {
     margin: 0;
     padding: 0;
@@ -11,12 +11,12 @@ body {
     margin: 0 auto;
     padding: 40px 20px;
     line-height: 1.7;
-    color: #2c3e50;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #2c2c2c;
+    background: #f8f8f8;
     min-height: 100vh;
 }
 
-/* Твоё фото */
+/* КРУГЛОЕ ФОТО — ИСПРАВЛЕНО */
 img {
     width: 220px;
     height: 220px;
@@ -24,78 +24,134 @@ img {
     display: block;
     margin: 0 auto 30px;
     object-fit: cover;
-    object-position: center;  /* Центрирует лицо */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    object-position: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
 }
 
 img:hover {
     transform: scale(1.05);
 }
 
-/* Заголовки */
+/* СТРОГИЕ Ч/Б ЗАГОЛОВКИ */
 h1, h2, h3, h4 {
-    color: #2c3e50;
+    color: #1a1a1a;
     margin-bottom: 15px;
+    font-weight: 600;
 }
 
-h1 { font-size: 2.2em; text-align: center; }
-h2 { font-size: 1.6em; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+h1 { 
+    font-size: 2.2em; 
+    text-align: center; 
+    border-bottom: 3px solid #000;
+    padding-bottom: 10px;
+}
 
-/* Текст */
+h2 { 
+    font-size: 1.6em; 
+    border-left: 4px solid #000;
+    padding-left: 15px;
+    margin-left: -10px;
+}
+
+/* ТЕКСТ */
 p {
     font-size: 1.1em;
     margin-bottom: 20px;
     text-align: center;
+    color: #333;
 }
 
-/* Таблица опыта */
+/* МОБИЛЬНАЯ ТАБЛИЦА — ГЛАВНЫЙ ФИКС */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 30px 0;
     background: white;
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
-th {
-    background: linear-gradient(45deg, #3498db, #2980b9);
-    color: white;
-    padding: 15px;
-    text-align: left;
+/* ДЕСКТОП */
+@media (min-width: 768px) {
+    th {
+        background: #000;
+        color: white;
+        padding: 15px;
+        font-weight: 600;
+    }
+    
+    td {
+        padding: 15px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    tr:hover {
+        background: #f5f5f5;
+    }
 }
 
-td {
-    padding: 15px;
-    border-bottom: 1px solid #eee;
+/* МОБИЛЬНАЯ ВЕРСИЯ — КАРТОЧКИ */
+@media (max-width: 767px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    tr {
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        padding: 15px;
+        background: white;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: right;
+        font-size: 16px;
+    }
+    
+    td:before {
+        content: attr(data-label) ": ";
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        font-weight: 600;
+        color: #000;
+        text-align: left;
+        font-size: 14px;
+    }
 }
 
-tr:hover {
-    background: #f8f9fa;
-}
-
-/* Списки */
+/* СПИСКИ */
 ol {
     background: white;
-    padding: 20px;
+    padding: 25px;
     border-radius: 8px;
-    margin: 20px 0;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin: 25px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    list-style-position: inside;
 }
 
 ol li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-size: 1.1em;
+    color: #333;
 }
 
-/* Форма */
+/* ФОРМА */
 form {
     background: white;
     padding: 30px;
@@ -108,26 +164,27 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
-    color: #34495e;
+    color: #1a1a1a;
 }
 
 input, textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
-    border: 2px solid #e1e8ed;
+    border: 2px solid #ddd;
     border-radius: 6px;
     font-size: 16px;
-    transition: border-color 0.3s;
+    background: #fafafa;
 }
 
 input:focus, textarea:focus {
     outline: none;
-    border-color: #3498db;
+    border-color: #000;
+    background: white;
 }
 
 button {
-    background: linear-gradient(45deg, #27ae60, #2ecc71);
+    background: #000;
     color: white;
     padding: 15px 30px;
     border: none;
@@ -136,21 +193,25 @@ button {
     font-weight: bold;
     cursor: pointer;
     width: 100%;
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
 }
 
 button:hover {
+    background: #333;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
-/* Ссылки */
+/* ССЫЛКИ */
 a {
-    color: #3498db;
+    color: #000;
     text-decoration: none;
     font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
 }
 
 a:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid #000;
+    color: #333;
 }
