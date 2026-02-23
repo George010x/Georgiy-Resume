@@ -150,10 +150,10 @@ ol {
 
 ol li {
     background: white;
-    padding: 20px;
+    padding: 12px 20px;
     border-radius: 12px;
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #2c2c2c;
     font-weight: 500;
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
@@ -161,6 +161,10 @@ ol li {
     position: relative;
     transition: all 0.3s ease;
     counter-increment: hobby-counter;
+    line-height: 1.4;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
 }
 
 ol li::before {
