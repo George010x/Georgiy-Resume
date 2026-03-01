@@ -190,11 +190,11 @@ ol li:hover {
     border-left-color: #3b82f6;
 }
 /* ТЕМАТИЧЕСКИЕ ИКОНКИ СПРАВА */
-ol li:nth-child(3)::after { content: "📖"; }  /* Чтение */
+ol li:nth-child(1)::after { content: "📖"; }  /* Чтение */
 ol li:nth-child(2)::after { content: "🚴"; }  /* Велосипед */
-ol li:nth-child(4)::after { content: "🔧"; }  /* Авторемонт */
-ol li:nth-child(5)::after { content: "🏗️"; }  /* Строительство */
-ol li:nth-child(1)::after { content: "🏁"; }  /* Off-Road */
+ol li:nth-child(3)::after { content: "🔧"; }  /* Авторемонт */
+ol li:nth-child(4)::after { content: "🏗️"; }  /* Строительство */
+ol li:nth-child(5)::after { content: "🏁"; }  /* Off-Road */
 
 ol li::after {
     margin-left: 15px;
