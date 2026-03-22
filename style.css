@@ -1,5 +1,4 @@
-/* СТРОГИЙ Ч/Б СТИЛЬ + МОБИЛЬНАЯ ТАБЛИЦА */
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,7 +15,6 @@ body {
     min-height: 100vh;
 }
 
-/* КРУГЛОЕ ФОТО */
 img {
     width: 220px;
     height: 220px;
@@ -33,7 +31,6 @@ img:hover {
     transform: scale(1.05);
 }
 
-/* СТРОГИЕ Ч/Б ЗАГОЛОВКИ */
 h1, h2, h3, h4 {
     color: #1a1a1a;
     margin-bottom: 15px;
@@ -54,7 +51,6 @@ h2 {
     margin-left: -10px;
 }
 
-/* ТЕКСТ */
 p {
     font-size: 1.1em;
     margin-bottom: 20px;
@@ -62,7 +58,6 @@ p {
     color: #333;
 }
 
-/* ССЫЛКИ — ПОЛНЫЙ НАБОР ПСЕВДОСЕЛЕКТОРОВ */
 a {
     color: #1e40af !important;
     text-decoration: none;
@@ -89,7 +84,6 @@ a:active {
     transform: scale(0.98);
 }
 
-/* МОБИЛЬНАЯ ТАБЛИЦА */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -124,7 +118,6 @@ table {
     td:before { content: attr(data-label) ": "; position: absolute; left: 15px; width: 45%; font-weight: 600; color: #000; text-align: left; font-size: 14px; }
 }
 
-/* ХОББИ — КАРТОЧКИ */
 ol {
     display: flex;
     flex-direction: column;
@@ -187,7 +180,6 @@ ol li::after {
     line-height: 1;
 }
 
-/* ФОРМА */
 form {
     background: white;
     padding: 30px;
@@ -219,7 +211,6 @@ input:focus, textarea:focus {
     background: white;
 }
 
-/* КЛАСС ДЛЯ КНОПОК */
 .btn {
     background: #000;
     color: white;
